@@ -14,15 +14,20 @@
             font-family: system-ui;
         }
         body{
+            text-transform: uppercase;
             background-color: black;
         }
         .first{
             text-align: center;
             padding-bottom: 1rem;
             transition: 1s all ease;
+            font-weight: bolder;
         }
         .second{
             border: 2px solid white;
+            box-shadow: 0 0 0.1rem black,
+            0 0 0.1rem black
+            ;
             text-align: center;
             padding: 0.3rem 1rem;
             border-radius: 5px;
@@ -45,26 +50,41 @@
             justify-content: center;
             align-items: center;
             background-image: linear-gradient(
-                140deg,
+                400deg,
                 rgb(115, 115, 255),
                 rgb(255, 210, 127),
                 rgb(254, 119, 119),
                 rgb(249, 118, 249)
             );
             background-size: 100%;
-            padding: 3rem;
+            padding: 3rem 5rem;
             border-radius: 10px;
             font-size: 1.2rem;
-            text-shadow: 0 0 0.5rem black;
-            transition: 0.5s all ease;
+            text-shadow: 0 0 0.1rem black;
+            border: 1px solid rgb(255, 255, 255);
+            box-shadow: 0 0 0.5rem rgb(81, 0, 255);
+            animation:5s all ease infinite;
+            animation-name: move;
         }
-        .box:hover{
-            background-size: 500%;
-        }
+        
+        @keyframes move {
+            0%{
+                background-size: 100%;
+                box-shadow: 0 0 0.5rem rgb(81, 0, 255);
+            }
+            50%{
+                background-size: 300%;
+                box-shadow: 0 0 0.5rem rgb(191, 0, 255);
+            }
+            100%{
+                background-size: 100%;
+                box-shadow: 0 0 0.5rem rgb(81, 0, 255);
+            }
 
+        }
         button{
             color: white;
-            text-shadow: 0 0 0.5rem black;
+            text-shadow: 0 0 0.1rem black;
             padding: 0.3rem 3rem;
             background-color: transparent;
             border: 2px solid white;
@@ -75,6 +95,15 @@
             margin-bottom: 1rem;
         }
 
+        .nope{
+            font-weight: bolder;
+        }
+
+        .false{
+            box-shadow: 0 0 0.1rem black,
+            0 0 0.1rem black
+            ;
+        }
 
 
     </style>
@@ -82,12 +111,12 @@
 <body>
     <div class="container">
         <div class="box">
-            <p class="first">The Results</p>
+            <p class="first">GAME</p>
             <button active="true" class="false">Enter</button>
             <p class="second" id="user">The user value : </p>
             <p class ="second" id="ai">The ai value : </p>
             <p class ="second" id="winner">The result is : </p>
-            <p lass="first">Score</p>
+            <p class="nope">Score</p>
             <p class="second" id="score">The AI : <br>
             The user : </p>
         </div>
