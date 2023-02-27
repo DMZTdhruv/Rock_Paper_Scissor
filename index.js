@@ -46,10 +46,10 @@ var wow = btn.addEventListener('click', ()=>{
         if(visibilty === "true"){
             let cpu = Math.floor(Math.random() * 3);
             let func = ["R","P","S"][cpu];
-            a.innerText = a.innerText = `The ai value : ${func}`;
+            a.innerText = a.innerText = `THE AI VALUE : ${func}`;
             value_user = get_value();
-            b.innerText = b.innerText = `The user value : ${value_user}`;
-            winner.innerText = winner.innerText = `The result is :  ${match(value_user,func)}`;
+            b.innerText = b.innerText = `THE USER VALUE : ${value_user}`;
+            winner.innerText = winner.innerText = `THE RESULT ARE :  ${match(value_user,func)}`;
             let result = match(value_user,func);
             console.log(result);
             if(result == "User won"){
